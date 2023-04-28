@@ -9,18 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@thirdweb-dev/sdk": "^3.10.11",
     "@types/node": "18.16.1",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
     "autoprefixer": "10.4.14",
+    "bs58": "^5.0.0",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
     "flowbite": "^1.6.5",
     "flowbite-react": "^0.4.4",
+    "hotkeys-sdk": "^0.2.1",
     "next": "13.3.1",
+    "notistack": "^3.0.1",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "solana": "link:@thirdweb-dev/react/solana",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
   }
