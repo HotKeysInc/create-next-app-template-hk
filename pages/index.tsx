@@ -41,6 +41,8 @@ export default function Home() {
     // Specify the mint address of the NFT to get the balance of
     const nftAddress = "...";
 
+    if(mintId) {
+
     if (keys.includes(str)) {
       console.log(true);
       setTimeout(() => {
@@ -53,7 +55,10 @@ export default function Home() {
     setTimeout(() => {
       enqueueSnackbar("Access denied, get a NFKey!", { variant: "error" });
     }, 2000);
-    return false;
+    return false;}
+    else {
+      enqueueSnackbar("Enter mint id!", { variant: "error" });
+    }
   }
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -68,6 +73,7 @@ export default function Home() {
   };
 
   function generateKey(str: string) {
+    if(secretKey) {
     const newKeys = [...keys, str];
     setKeys(newKeys);
 
@@ -76,7 +82,9 @@ export default function Home() {
       console.log(
         "txnID : FEm6hZRdRF2JE6ujvmBNfJmwyYnncZpcjYxRHsdN5vkn"
       );
-    }, 3000); // 3-second delay
+    }, 3000); } else {
+      enqueueSnackbar("Enter key!", { variant: "error" });
+    }// 3-second delay
   }
 
   // async function generateKey(connection: Connection, owner: Keypair) {
